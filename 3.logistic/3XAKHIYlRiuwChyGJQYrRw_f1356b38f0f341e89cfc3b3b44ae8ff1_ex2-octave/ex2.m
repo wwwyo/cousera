@@ -100,6 +100,7 @@ pause;
 %  optimal parameters theta.
 
 %  Set options for fminunc
+% GradObj: コストと勾配を返す
 options = optimset('GradObj', 'on', 'MaxIter', 400);
 
 %  Run fminunc to obtain the optimal theta

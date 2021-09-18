@@ -26,6 +26,12 @@ clear ; close all; clc
 
 data = load('ex2data2.txt');
 X = data(:, [1, 2]); y = data(:, 3);
+function y = plotData(X, y)
+	pos = find(y==1); neg = find(y==0);
+	plot(X(pos,1), X(pos,2), 'b+');
+	hold on;
+	plot(X(neg,1), X(neg,2), 'ko');
+end
 
 plotData(X, y);
 
